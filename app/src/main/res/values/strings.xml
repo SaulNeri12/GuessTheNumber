@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">GuessTheNumber</string>
+    <string name="app_title">The Eye</string>
+    <string name="game_tap_advice">Type on generate to start</string>
 </resources>

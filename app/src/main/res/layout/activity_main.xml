@@ -8,6 +8,105 @@
     android:background="@drawable/background_pattern"
     tools:context=".MainActivity">
 
-    
+
+    <ImageView
+        android:id="@+id/eyeImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:srcCompat="@drawable/ic_eyeball"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@color/white"
+        android:text="@string/app_title"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="182dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/eyeImage"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/guessings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@color/white"
+        android:text="@string/game_tap_advice"
+        android:textColor="#009688"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"/>
+
+    <Button
+        android:id="@+id/btnDown"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/mustard"
+        android:text="DOWN"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guessings"
+        app:layout_constraintTop_toBottomOf="@id/guessings"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        />
+
+    <Button
+        android:id="@+id/btnUp"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/mustard"
+        android:text="UP"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/guessings"
+        app:layout_constraintTop_toBottomOf="@id/guessings"
+        android:layout_marginTop="30dp"
+        />
+
+    <Button
+        android:id="@+id/btnGenerate"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/orange"
+        android:text="GENERATE"
+        android:textColor="@color/black"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btnUp"
+        app:layout_constraintStart_toEndOf="@+id/btnDown"
+        app:layout_constraintTop_toBottomOf="@id/btnDown"
+        android:layout_marginTop="40dp"
+        />
+
+    <Button
+        android:id="@+id/guessed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="GUESSED"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:textSize="30dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/btnGenerate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
